@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7c3aed">
+  <title>Rainbow Tools — Little tools, big ideas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="rainbow-bar" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Rainbow Tools home">
+      <span class="brand-mark">R</span><span>Rainbow <b>Tools</b></span>
+    </a>
+    <div class="header-actions">
+      <button class="icon-button" id="sound-toggle" type="button" aria-pressed="false" title="Toggle sound">Sound: Off</button>
+      <button class="icon-button" id="theme-toggle" type="button" aria-pressed="false" title="Toggle dark mode">Dark mode</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow"><span class="status-dot"></span> YOUR EVERYDAY TOOLBOX</div>
+      <h1>Little tools.<br><span class="rainbow-text">Big ideas.</span></h1>
+      <p class="hero-copy">Useful mini tools for your everyday tasks. Free to use, easy to love, and right here in your browser.</p>
+      <label class="search-wrap" for="tool-search">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="tool-search" type="search" placeholder="Search tools..." autocomplete="off">
+        <span class="search-hint">Try “color”</span>
+      </label>
+      <div class="hero-pills"><span>✦ Free tools</span><span>✦ Mobile friendly</span><span>✦ Saves on your device</span></div>
+    </section>
+
+    <section class="section-heading">
+      <div><p class="section-kicker">PICK A TOOL</p><h2>Your toolbox</h2></div>
+      <p class="tool-count" id="tool-count">6 tools</p>
+    </section>
+
+    <section class="tools-grid" id="tools-grid">
+      <article class="tool-card" data-tool="calculator math numbers add subtract multiply divide">
+        <div class="tool-icon icon-purple">＋</div><div class="tool-top"><span class="category">MATH</span><span class="tiny-spark">✦</span></div>
+        <h3>Quick Calculator</h3><p>Do everyday calculations without opening another app.</p>
+        <button class="open-tool" data-open="calculator">Open calculator <span>→</span></button>
+      </article>
+      <article class="tool-card" data-tool="word counter text characters words lines writing">
+        <div class="tool-icon icon-pink">Aa</div><div class="tool-top"><span class="category">WRITING</span><span class="tiny-spark">✦</span></div>
+        <h3>Word Counter</h3><p>Count words, characters, and lines as you type.</p>
+        <button class="open-tool" data-open="words">Count words <span>→</span></button>
+      </article>
+      <article class="tool-card" data-tool="color generator palette hex random design">
+        <div class="tool-icon icon-orange">◉</div><div class="tool-top"><span class="category">DESIGN</span><span class="tiny-spark">✦</span></div>
+        <h3>Color Generator</h3><p>Discover a fresh color and copy its HEX code.</p>
+        <button class="open-tool" data-open="colors">Make a color <span>→</span></button>
+      </article>
+      <article class="tool-card" data-tool="timer countdown minutes seconds clock focus">
+        <div class="tool-icon icon-blue">◷</div><div class="tool-top"><span class="category">TIME</span><span class="tiny-spark">✦</span></div>
+        <h3>Focus Timer</h3><p>Set a countdown for study, breaks, or any task.</p>
+        <button class="open-tool" data-open="timer">Start timer <span>→</span></button>
+      </article>
+      <article class="tool-card" data-tool="todo to-do task list checklist save">
+        <div class="tool-icon icon-green">✓</div><div class="tool-top"><span class="category">ORGANIZE</span><span class="tiny-spark">✦</span></div>
+        <h3>To-do List</h3><p>Keep track of tasks. Your list saves in this browser.</p>
+        <button class="open-tool" data-open="todo">Manage tasks <span>→</span></button>
+      </article>
+      <article class="tool-card" data-tool="password generator secure random letters numbers symbols">
+        <div class="tool-icon icon-indigo">⌘</div><div class="tool-top"><span class="category">PRIVACY</span><span class="tiny-spark">✦</span></div>
+        <h3>Password Generator</h3><p>Create a random password on your own device.</p>
+        <button class="open-tool" data-open="password">Generate password <span>→</span></button>
+      </article>
+    </section>
+    <p class="no-results hidden" id="no-results">No tools found. Try another search.</p>
+
+    <section class="workspace hidden" id="workspace" aria-live="polite">
+      <div class="workspace-heading"><div><p class="section-kicker">TOOL WORKSPACE</p><h2 id="workspace-title">Quick Calculator</h2></div><button class="close-tool" id="close-tool" type="button">Close ×</button></div>
+      <div id="tool-content"></div>
+    </section>
+
+    <section class="privacy-note"><div class="privacy-icon">♡</div><div><h3>Your tools, your device</h3><p>Your to-do list and settings are stored in this browser using local storage. They aren't automatically synced to other devices. Avoid saving sensitive information here on a shared computer.</p></div></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#"><span class="brand-mark">R</span><span>Rainbow <b>Tools</b></span></a><p>Made for curious minds. One colorful click at a time.</p><span class="footer-copy">© <span id="year"></span> Rainbow Tools</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
